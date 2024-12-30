@@ -3,65 +3,99 @@
   padding: 0;
   box-sizing: border-box;
   vertical-align: top;
-  font-family: "Pretendard Variable", sans-serif;
+  font-family: "Pretendard Variable";
   background-color: #000;
   color: #fff;
 }
 
-.cage {
-  padding: 140px 0;
-}
-
 .container {
   width: 1208px;
-  padding: 0 24px;
+  padding: 140px 24px;
   margin: 0 auto;
 }
 
-.main_visual {
+.landing__header {
+  text-align: center;
+}
+.landing__subtitle {
+  font-family: "Neue Haas Grotesk Text Pro";
+  color: #ff4a08;
+  font-size: 16px;
+  letter-spacing: 2%;
+  line-height: 21px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+.landing__title {
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -2%;
+  font-weight: bold;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.landing__title .eng {
+  font-family: "Neue Haas Grotesk Text Pro";
+  font-weight: 500;
+  display: inline-block;
+}
+.landing__description {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -2%;
+  font-weight: 300;
+  color: #ccc;
+}
+
+/* main_visual */
+.hero {
   width: 100%;
   height: 880px;
 }
-.main_visual .visual_txt {
+.hero__content {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.main_visual .visual_txt h1 {
+.hero__title {
   display: flex;
   align-items: center;
   font-size: 64px;
   letter-spacing: -2%;
   text-transform: uppercase;
   line-height: 72px;
-  margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-block;
 }
-.main_visual .visual_txt h1 span {
+.hero__title:first-child {
+  margin-bottom: 12px;
+}
+.hero__highlight {
   color: #ff4a08;
 }
-.main_visual .visual_txt h1 .eng {
+.hero__brand {
   font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
 }
-.main_visual .visual_txt h1 img.title {
+.hero__logo {
   width: 180px;
 }
-.main_visual .visual_txt h1 img.icon {
+.hero__icon {
   width: 70px;
-  margin: 0 12px;
   vertical-align: top;
 }
-.main_visual .visual_txt .desc {
+.hero__description {
   font-size: 20px;
   color: #ccc;
   line-height: 32px;
   font-weight: 400;
   margin: 30px 0 80px;
 }
-.main_visual .visual_txt .form_btn {
+.hero__cta {
   display: inline-block;
   font-size: 24px;
   line-height: 1;
@@ -73,8 +107,445 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.main_visual .visual_txt .form_btn:hover {
+.hero__cta:hover {
   background-color: #ff4a08;
   border: 1px solid #ff4a08;
   transition: all 0.3s ease;
+}
+
+/* 요금제  */
+.pricing {
+}
+.pricing .pricing__plans {
+  margin: 60px 0 40px;
+  display: flex;
+  gap: 0 24px;
+  align-items: stretch;
+}
+.plan {
+  width: calc(100% / 4 - 12px);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 40px 0;
+  text-align: center;
+}
+.plan__name {
+  font-family: "Neue Haas Grotesk Text Pro";
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  padding: 8px 16px 6px 33px;
+  border-radius: 100px;
+  background-color: #2a2a2a;
+  display: inline-block;
+  position: relative;
+}
+.plan__name::before {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 100px;
+  background-color: #616161;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+}
+.plan:nth-child(2) .plan__name::before {
+  background-color: #00cc81;
+}
+.plan:nth-child(3) .plan__name::before {
+  background-color: #ff5500;
+}
+.plan:nth-child(4) .plan__name::before {
+  background-color: #ff0037;
+}
+.plan__name .ko {
+  background-color: #2a2a2a;
+  font-family: "Pretendard Variable", sans-serif;
+}
+
+.plan__description {
+  margin: 16px 0 22px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -2%;
+}
+.plan__description strong {
+  font-weight: 500;
+}
+.plan__price {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 100%;
+  display: flex;
+  align-items: baseline;
+  height: 30px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.plan__price .currency {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 2px;
+  display: inline-block;
+}
+.plan__price .unit {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 3%;
+  display: inline-block;
+}
+.plan__details-toggle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -3%;
+  margin-bottom: 24px;
+}
+.plan__features {
+  padding-top: 24px;
+  border-top: 1px solid #333333;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  margin: 0 20px;
+}
+.plan__features li {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -2%;
+  color: #bbb;
+  padding-left: 22px;
+  position: relative;
+}
+.plan__features li::before {
+  position: absolute;
+  content: "+";
+  font-size: 18px;
+  left: 0;
+  top: 0;
+  color: #9f9f9f;
+  width: 22px;
+  text-align: center;
+}
+.pricing .desc {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -2%;
+  line-height: 100%;
+}
+.pricing .desc strong {
+  font-weight: 500;
+}
+
+/* 영상 소개 */
+.youtube {
+}
+.video__list {
+  margin-top: 60px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+.video__list li {
+  padding: 36px 0;
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+  border-bottom: 1px solid #333;
+}
+.video__list li:first-child {
+  padding-top: 0;
+}
+.video__list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.plan__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  padding-left: 10px;
+}
+.plan_title h3 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -2%;
+  font-weight: 700;
+}
+.plan_title span {
+  font-family: "Neue Haas Grotesk Text Pro";
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  padding: 8px 16px 6px 33px;
+  border-radius: 100px;
+  background-color: #2a2a2a;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 16px;
+}
+.plan_title span::before {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 100px;
+  background-color: #616161;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+}
+.video__list li:nth-child(2) .plan_title span::before {
+  background-color: #00cc81;
+}
+.video__list li:nth-child(3) .plan_title span::before {
+  background-color: #ff5500;
+}
+.video__list li:nth-child(4) .plan_title span::before {
+  background-color: #ff0037;
+}
+.plan_title span .ko {
+  background-color: #2a2a2a;
+  font-family: "Pretendard Variable", sans-serif;
+}
+.plan__desc {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: -2%;
+  color: #ccc;
+}
+
+.sample__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 8px;
+  margin-top: 60px;
+}
+.sample__list ul {
+  width: calc(100% / 4 - 4px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+.sample__list ul li {
+  cursor: pointer;
+  position: relative;
+}
+.sample__list ul li:hover {
+  transition: all 0.3s ease;
+}
+.sample__list ul li::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  background-color: #00000060;
+  opacity: 0;
+}
+.sample__list ul li:hover::before {
+  opacity: 1;
+}
+.sample__list ul li::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-image: url(/img/sample_plus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+.sample__list ul li:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* 제작 과정 */
+.step {
+}
+.step__list {
+  margin-top: 60px;
+  display: flex;
+  gap: 0 24px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.step__list::before {
+  position: absolute;
+  content: "";
+  background-color: #333;
+  width: calc(100% - 272px);
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25px;
+  z-index: 0;
+}
+.step__list li {
+  width: calc(100% / 4 - 12px);
+}
+.step__list li .num {
+  font-family: "Neue Haas Grotesk Text Pro";
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  background-color: #000;
+  border-radius: 100px;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: -2%;
+  font-weight: 500;
+  z-index: 1;
+  position: relative;
+}
+.step__list li h4 {
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -2%;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.step__list li p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ccc;
+  line-height: 26px;
+  letter-spacing: -2%;
+}
+.step__list li.active .num {
+  background-color: #fff;
+  color: #000;
+}
+
+/* 자주 묻는 질문(Q&A) */
+.qna__list {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+}
+.qna__list li {
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 28px 48px;
+  box-sizing: border-box;
+}
+.qna__list li .q {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  line-height: 32px;
+}
+.qna__list li .q button {
+  cursor: pointer;
+  padding-left: 30px;
+  box-sizing: border-box-box;
+}
+.q button img {
+  transition: transform 0.3s ease; /* 부드럽게 회전 */
+}
+.q button img.rotate {
+  transform: rotate(-180deg); /* 180도 회전 */
+  transition: transform 0.3s ease; /* 부드럽게 회전 */
+}
+.qna__list li .a {
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 1px solid #333;
+  flex-direction: column;
+  display: none;
+}
+.qna__list li .a p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #ccc;
+  line-height: 26px;
+  letter-spacing: -2%;
+}
+.qna__list li .a p:last-child {
+  margin-top: 12px;
+}
+
+.form__list {
+  display: flex;
+  align-items: stretch;
+  gap: 0 24px;
+  margin-top: 60px;
+}
+.form__list .left {
+  width: 25%;
+  aspect-ratio: 9/16;
+  background-color: #ccc;
+  border-radius: 8px;
+}
+.form__list .right form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px 0;
+}
+
+.form__list .right form input {
+  width: 100%;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 20px 28px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #bbb;
+  line-height: 32px;
+  letter-spacing: -2%;
+}
+
+.form__list .right form .number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.form__list .right form .txt {
+  flex-grow: 1;
+  height: 320px;
+}
+
+.form__list .right form textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 20px 28px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #bbb;
+  letter-spacing: -2%;
 }
